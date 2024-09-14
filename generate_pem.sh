@@ -5,7 +5,7 @@ openssl genrsa -out privatekey.pem 2048
 
 # Generate a Certificate Signing Request (CSR)
 openssl req -new -key privatekey.pem -out csr.pem \
-  -subj "/C=US/ST=State/L=City/O=Organization/OU=OrgUnit/CN=example.com"
+  -subj "/C=US/ST=State/L=City/O=Organization/OU=OrgUnit/CN=api.psykon.com"
 
 # Generate a self-signed certificate (valid for 365 days)
 openssl req -x509 -key privatekey.pem -in csr.pem -out certificate.pem -days 365
